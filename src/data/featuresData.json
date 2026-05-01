@@ -1,0 +1,25 @@
+{
+  "sectionTitle": "Why Your Business Needs Agentic AI",
+  "items": [
+    {
+      "icon": "/assets/Feature1.png",
+      "title": "Available 24/7",
+      "description": "Never miss a question \nor lead."
+    },
+    {
+      "icon": "/assets/Feature2.png",
+      "title": "Instant Answers",
+      "description": "Reduce bounce rates and \nsupport tickets."
+    },
+    {
+      "icon": "/assets/Feature3.png",
+      "title": "More Engagement",
+      "description": "Keep users \non-site longer."
+    },
+    {
+      "icon": "/assets/Feature4.png",
+      "title": "Lead Capture",
+      "description": "Gather emails, phone \nnumbers and preferences."
+    }
+  ]
+}

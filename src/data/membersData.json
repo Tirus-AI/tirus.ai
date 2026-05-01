@@ -1,0 +1,50 @@
+{
+  "sectionTitle": "Meet the team",
+  "items": [
+    {
+      "name": "Rouben Gargaloyan",
+      "role": "Founder",
+      "image": "/assets/Rouben.png"
+    },
+    {
+      "name": "Roman Kocharyan",
+      "role": "Technical Lead",
+      "image": "/assets/Roman.png"
+    },
+    {
+      "name": "Tigran Sarukhanyan",
+      "role": "Technical Lead",
+      "image": "/assets/Tigran.png"
+    },
+    {
+      "name": "Vlad Abrahamyan",
+      "role": "Technical Lead",
+      "image": "/assets/Vlad.png"
+    },
+    {
+      "name": "Meri Shamiryan",
+      "role": "UI/UX Designer",
+      "image": "/assets/Meri.png"
+    },
+    {
+      "name": "Hovsep Hovsepyan",
+      "role": "Sr. Soft Engineer",
+      "image": "/assets/Hovsep.png"
+    },
+    {
+      "name": "Abraham Abajanyan",
+      "role": "Sr. Soft Engineer",
+      "image": "/assets/Abraham.png"
+    },
+    {
+      "name": "Karina Zohrabyan",
+      "role": "QA Specialist",
+      "image": "/assets/Karina.png"
+    },
+    {
+      "name": "Robert Balayan",
+      "role": "Developer",
+      "image": "/assets/Robert.png"
+    }
+  ]
+}

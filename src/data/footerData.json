@@ -1,0 +1,15 @@
+{
+  "navLinks": [
+    { "title": "About Us", "href": "/about" },
+    { "title": "Contact", "href": "#" },
+    { "title": "Terms", "href": "#" },
+    { "title": "Privacy", "href": "#" }
+  ],
+  "socialLinks": [
+    { "icon": "/assets/Facebook.png", "href": "https://www.facebook.com/people/Tirus-AI/61579922322319/", "label": "Facebook" },
+    { "icon": "/assets/Instagram.png", "href": "https://www.instagram.com/tirus.ai", "label": "Instagram" },
+    { "icon": "/assets/Linkedin.png", "href": "https://www.linkedin.com/company/tirus-ai", "label": "LinkedIn" }
+  ],
+  "copyright": "© 2026 Tirus. All rights reserved",
+  "status": "Coming soon"
+}

@@ -1,0 +1,23 @@
+{
+    "sectionTitle": "How It Works",
+    "items": [
+        {
+            "leftImg": "/assets/Step0.svg",
+            "rightImg": "/assets/Step1.svg",
+            "text": "We will work with you to \nidentify and analyze your \nspecific business needs",
+            "alt": "Step 1"
+        },
+        {
+            "leftImg": "/assets/Step0.svg",
+            "rightImg": "/assets/Step2.svg",
+            "text": "Perform integration with \nyour existing tools and \nprocesses",
+            "alt": "Step 2"
+        },
+        {
+            "leftImg": "/assets/Step0.svg",
+            "rightImg": "/assets/Step3.svg",
+            "text": "Launch — Let AI streamline \nyour business immediately",
+            "alt": "Step 3"
+        }
+    ]
+}

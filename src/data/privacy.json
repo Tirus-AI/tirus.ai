@@ -1,0 +1,163 @@
+{
+    "title": "Tirus AI — Privacy Policy",
+    "effectiveDate": "Effective date: August 23, 2025",
+    "subtitle": "This policy explains how Tirus AI collects, uses, and safeguards information. It is written for clarity and does not replace legal advice.)",
+    "sections": [
+        {
+            "number": 1,
+            "title": "Who we are",
+            "paragraphs": [
+                "Tirus AI (“Tirus AI,” “we,” “us,” or “our”) is a consulting company that helps organizations adopt and operate agentic AI systems. This Privacy Policy applies to our websites, communications, and consulting services (collectively, the “Services”).",
+                "<p style='margin-top:24px'><span style='font-weight:500'>Contact:</span> info@tirus.ai • 3200 Fairesta str. Unit 2, La Crescenta, CA, 91214</p>"
+            ]
+        },
+        {
+            "number": 2,
+            "title": "What we collect",
+            "paragraphs": [
+                "We collect information in three ways:"
+            ],
+            "groups": [
+                {
+                    "title": "You provide it",
+                    "bullets": [
+                        "Contact details (name, email, phone, company, role)",
+                        "Business content you share during consulting (documents, datasets, prompts, workflows, system access details provided for integration)",
+                        "Billing details (billing contact, address, tax ID; payment processing is handled by our payment provider)"
+                    ]
+                },
+                {
+                    "title": "Collected automatically",
+                    "bullets": [
+                        "Usage data (pages viewed, links clicked, time on page)",
+                        "Device and log data (IP address, browser type, operating system, timestamps, referrer URL)",
+                        "Cookies and similar technologies (see “Cookies & Analytics”)"
+                    ]
+                },
+                {
+                    "title": "From third parties",
+                    "bullets": [
+                        "Lead sources and conference/event organizers (if you opt-in)",
+                        "Identity or account providers (if you choose SSO)",
+                        "Subprocessors used to deliver the Services (e.g., cloud, analytics, language model providers)"
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "title": "How we use information",
+            "bullets": [
+                "Provide and improve the Services, including demos, evaluations, and deliverables",
+                "Configure, test, and operate agentic AI solutions for your organization",
+                "Communicate with you (support, updates, security alerts, marketing if permitted)",
+                "Personalize content and measure site performance",
+                "Comply with law, prevent fraud and abuse, and ensure platform safety"
+            ],
+            "groups": [
+                {
+                    "title": "AI-specific uses:",
+                    "bullets": [
+                        "We do <span style='font-weight:500'>not</span> use your confidential client data to train foundation models unless you give us written consent (e.g., in a Statement of Work (SOW) or Data Processing Addendum (DPA)).",
+                        "When we route your inputs to third-party AI APIs or tools (at your request or as part of an agreed solution), your data may be processed by those providers under their terms."
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 4,
+            "title": "Legal bases (EEA/UK users)",
+            "paragraphs": [
+                "We rely on contract performance, legitimate interests (e.g., service improvement, security), consent (where required), and legal obligations."
+            ]
+        },
+        {
+            "number": 5,
+            "title": "Sharing and disclosure",
+            "paragraphs": [
+                "We share information with:"
+            ],
+            "bullets": [
+                "<span style='font-weight:500'>Service providers/subprocessors</span> (hosting, AI/LLM vendors, analytics, email, support). We require appropriate confidentiality and security commitments.",
+                "<span style='font-weight:500'>Business transfers</span> (merger, acquisition, asset sale) with notice where required.",
+                "<span style='font-weight:500'>Legal compliance</span> (lawful requests, enforcement of rights, prevention of harm)."
+            ],
+            "postParagraphs": [
+                "We do not sell personal information."
+            ]
+        },
+        {
+            "number": 6,
+            "title": "International transfers",
+            "paragraphs": [
+                "Where data is transferred internationally, we use appropriate safeguards (e.g., Standard Contractual Clauses or other lawful mechanisms)."
+            ]
+        },
+        {
+            "number": 7,
+            "title": "Data retention",
+            "paragraphs": [
+                "We retain personal information only as long as needed for the purposes described above, to comply with legal obligations, resolve disputes, and enforce agreements. Client project data follows the retention terms in your SOW/DPA; upon request, we will delete or return it unless law requires retention."
+            ]
+        },
+        {
+            "number": 8,
+            "title": "Security",
+            "paragraphs": [
+                "We use administrative, technical, and physical safeguards appropriate to the nature of the data (e.g., access controls, encryption in transit, least-privilege practices). No method is 100% secure; we promptly evaluate and address incidents in line with our response procedures."
+            ]
+        },
+        {
+            "number": 9,
+            "title": "Your rights",
+            "paragraphs": [
+                "Depending on your location, you may have rights to access, correct, delete, restrict/oppose processing, portability, or withdraw consent. To exercise rights, contact us at [insert email]. We may verify your identity and deny requests where permitted by law."
+            ],
+            "labeledParagraphs": [
+                {
+                    "label": "California (CCPA/CPRA): ",
+                    "text": "You may have the right to know, delete, correct, and to limit use of sensitive personal information. We do not “sell” personal information as defined by the CCPA. To submit a request or designate an authorized agent, contact us at [insert URL/email]."
+                },
+                {
+                    "label": "EEA/UK: ",
+                    "text": "You may lodge a complaint with your local data protection authority."
+                }
+            ]
+        },
+        {
+            "number": 10,
+            "title": "Cookies & analytics",
+            "paragraphs": [
+                "We use cookies and similar technologies to operate the site and understand usage. You can manage preferences through your browser or our cookie banner. Disabling certain cookies may limit functionality."
+            ]
+        },
+        {
+            "number": 11,
+            "title": "Children",
+            "paragraphs": [
+                "Our Services are not directed to children under 16. If we learn we collected such data, we will delete it."
+            ]
+        },
+        {
+            "number": 12,
+            "title": "Third-party links & AI providers",
+            "paragraphs": [
+                "Our site may link to other services. Their privacy practices govern those properties. Where you ask us to integrate with third-party AI tools, their privacy policies will apply to data processed by them."
+            ]
+        },
+        {
+            "number": 13,
+            "title": "Changes to this policy",
+            "paragraphs": [
+                "We may update this policy from time to time. The “Effective date” will change when updates are posted. Material changes will be communicated as required."
+            ]
+        },
+        {
+            "number": 14,
+            "title": "How to contact us",
+            "paragraphs": [
+                "Questions or requests: <a href='mailto:info@tirus.ai' style='text-decoration:underline; color:#86a4ff'>info@tirus.ai</a>"
+            ]
+        }
+    ]
+}

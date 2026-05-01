@@ -1,0 +1,198 @@
+{
+  "title": "Tirus AI — Terms of Service",
+  "effectiveDate": "Effective date: August 23, 2025",
+  "subtitle": "(These Terms govern your use of Tirus AI’s website and consulting services.)",
+  "sections": [
+    {
+      "number": 1,
+      "title": "Parties and agreement",
+      "paragraphs": [
+        "These Terms of Service (“Terms”) are between Tirus AI (“Tirus AI,” “we,” “us”) and the entity or person who uses our website, requests proposals, or engages our Services (“Customer,” “you”). By accessing the site or signing an order, proposal, or SOW, you agree to these Terms."
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Services; Statements of Work (SOWs)",
+      "paragraphs": [
+        "Consulting, implementation, and advisory work will be described in one or more SOWs or Order Forms (each, an “SOW”). If there is a conflict, the SOW controls over these Terms."
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Accounts & access",
+      "paragraphs": [
+        "You are responsible for the security of any accounts, credentials, API keys, or system access you provide or that we create for you. You will notify us promptly of any suspected compromise."
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Customer responsibilities",
+      "bullets": [
+        "Provide timely access to personnel, systems, and data needed for the project",
+        "Ensure you have all necessary rights/permissions to share data and to authorize the integrations we perform",
+        "Use deliverables responsibly and in compliance with law and policy (see “Acceptable Use”)",
+        "Maintain appropriate human review over AI outputs"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "AI & third-party components",
+      "paragraphs": [
+        "Our work may involve third-party models, APIs, datasets, or tools. You acknowledge:"
+      ],
+      "bullets": [
+        "Outputs may be <span style='font-weight:500'>probabilistic, incomplete,</span> or <span style='font-weight:500'>inaccurate</span> (“hallucinations” can occur).",
+        "You must apply human oversight before using outputs for decisions with legal, medical, financial, or safety implications.",
+        "Third-party components are governed by their own terms; you are responsible for complying with them where you hold the account.",
+        "Unless expressly agreed, we do not guarantee model or provider availability, performance, or results."
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Deliverables; intellectual property",
+      "bullets": [
+        "<span style='font-weight:500'>Your Data.</span> As between the parties, you own your data and pre-existing materials.",
+        "<span style='font-weight:500'>Deliverables.</span> Upon full payment, you receive a worldwide, non-exclusive, perpetual license to use project deliverables for your internal business purposes, unless the SOW grants broader rights.",
+        "<span style='font-weight:500'>Background IP & Tools.</span> We retain ownership of our pre-existing methods, templates, libraries, and tools. To the extent they are included in deliverables, we grant you a license to use them as part of the deliverables.",
+        "<span style='font-weight:500'>Open Source.</span> Deliverables may include open-source components under their respective licenses."
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Confidentiality",
+      "paragraphs": [
+        "Each party may receive non-public information marked confidential or that should reasonably be understood as confidential (“Confidential Information”). The receiving party will use it only to fulfill the agreement, protect it with reasonable care, and not disclose it except to personnel and subprocessors under similar obligations.",
+        "Exclusions: information that is public, independently developed, or lawfully obtained without duty of confidentiality. Required disclosures by law are permitted with notice where legally allowed."
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Data protection",
+      "paragraphs": [
+        "If we process personal data on your behalf, a Data Processing Addendum (“DPA”) will apply and is incorporated by reference when executed. Unless the SOW/DPA states otherwise, we will not use your data to train foundation models."
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Acceptable use",
+      "paragraphs": [
+        "You will not use the Services or deliverables to:"
+      ],
+      "bullets": [
+        "Violate law, infringe IP rights, or invade privacy",
+        "Build or deploy systems for unlawful surveillance, discrimination, or harassment",
+        "Generate or disseminate harmful content (e.g., malware, exploit code, incitement to violence)",
+        "Provide professional advice without qualified human oversight (legal, medical, financial, etc.)",
+        "Bypass security, rate limits, or usage controls"
+      ],
+      "postParagraphs": [
+        "We may suspend access for violations to protect the Services or others."
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Fees, invoicing, and taxes",
+      "paragraphs": [
+        "Fees and payment schedules are set out in the SOW. Unless stated otherwise, invoices are due <span style='font-weight:500'>net 30</span> days. Fees are exclusive of taxes; you are responsible for applicable taxes other than our income taxes. Late amounts may accrue interest at the lesser of 1.5% per month or the maximum allowed by law."
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Warranties and disclaimers",
+      "bullets": [
+        "We warrant that we will provide Services in a professional and workmanlike manner.",
+        "<span style='font-weight:500'>Disclaimer.</span> Except as expressly stated, the Services and deliverables are provided <span style='font-weight:500'>“AS IS”</span> without warranties of merchantability, fitness for a particular purpose, non-infringement, or error-free/accurate outputs. AI systems may produce unexpected or incorrect content; you are responsible for review and validation."
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Limitation of liability",
+      "paragraphs": [
+        "To the maximum extent permitted by law:"
+      ],
+      "bullets": [
+        "Neither party is liable for indirect, incidental, special, consequential, or punitive damages, or lost profits, revenue, data, or goodwill.",
+        "Each party’s total liability arising out of or related to the Services is capped at the amounts paid or payable to Tirus AI under the applicable SOW in the <span style='font-weight:500'>12 months</span> preceding the event giving rise to liability."
+      ],
+      "postParagraphs": [
+        "These limits do not apply to (a) breach of confidentiality, (b) misuse of the other party’s IP, or (c) your payment obligations."
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Indemnification",
+      "bullets": [
+        "<span style='font-weight:500'>By Tirus AI.</span> We will defend and indemnify you against third-party claims alleging that our <span style='font-weight:500'>non-customer</span> materials used in the deliverables infringe IP rights, subject to customary exclusions (e.g., combinations not supplied by us, modifications by you, open-source components under their own licenses).",
+        "<span style='font-weight:500'>By Customer.</span> You will defend and indemnify Tirus AI against claims arising from your data, your instructions, or your misuse of the Services or deliverables."
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Term, termination, and effect",
+      "paragraphs": [
+        "These Terms apply from your first use of the site or effective date of an SOW and continue until terminated. Either party may terminate an SOW for material breach not cured within 30 days of notice. Upon termination, you will pay for work performed and reasonable wind-down costs. Sections intended to survive (e.g., fees, IP, confidentiality, disclaimers, limits, indemnities) will survive."
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Publicity",
+      "paragraphs": [
+        "With prior written consent (email sufficient), we may identify you as a client (name and logo) in our marketing. You may withdraw consent at any time."
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Compliance; export",
+      "paragraphs": [
+        "You will comply with applicable laws, including export control and sanctions laws, when using deliverables and third-party services."
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Independent contractor",
+      "paragraphs": [
+        "We provide Services as an independent contractor. These Terms do not create a partnership, joint venture, employment, or agency relationship."
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Assignment",
+      "paragraphs": [
+        "Neither party may assign these Terms or an SOW without the other party’s consent, except to an affiliate or in connection with a merger, acquisition, or sale of substantially all assets."
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Governing law; venue; disputes",
+      "paragraphs": [
+        "Governing law and venue will be [insert state/country]. The parties consent to the exclusive jurisdiction of courts located in [insert venue].",
+        "Optional: The parties may agree in writing to binding arbitration or mediation procedures in an SOW."
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Changes to these Terms",
+      "paragraphs": [
+        "We may update these Terms for the website from time to time. SOWs will be changed only by mutual written agreement. Material changes to site Terms will be posted with a new effective date."
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Notices",
+      "paragraphs": [
+        "Legal notices must be sent to:"
+      ],
+      "bullets": [
+        "<span style='font-weight:500'>Tirus AI:</span> info@tirus.ai",
+        "<span style='font-weight:500'>Customer:</span> The contact listed in your SOW or account"
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Entire agreement; order of precedence",
+      "paragraphs": [
+        "These Terms, together with any SOWs and the DPA (if executed), form the entire agreement for the Services described therein and supersede prior discussions on those subjects. If there is a conflict, the following order applies: (1) SOW, (2) DPA (for data processing matters), (3) these Terms."
+      ]
+    }
+  ]
+}

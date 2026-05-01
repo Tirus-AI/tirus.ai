@@ -1,0 +1,17 @@
+{
+  "sectionTitle": "Contact Us",
+  "items": [
+    {
+      "icon": "/assets/ContactPhone.png",
+      "title": "Phone Number",
+      "description": "+1 (626) 540-2577",
+      "link": "tel:+16265402577"
+    },
+    {
+      "icon": "/assets/ContactMessage.png",
+      "title": "Message Us",
+      "description": "info@tirus.ai",
+      "link": "mailto:info@tirus.ai"
+    }
+  ]
+}
