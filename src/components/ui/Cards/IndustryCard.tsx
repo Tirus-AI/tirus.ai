@@ -36,11 +36,11 @@ const IndustryCard: React.FC<IndustryCardProps> = ({ title, description, icon })
           sx={{
             position: 'absolute',
             top: 0,
-            left: 0,
             width: '100%',
             height: 5,
-            backgroundImage: 'linear-gradient(90deg, transparent 0%, #5c33bc 50%, transparent 100%)',
-            backgroundSize: '100% 100%',
+            backgroundImage: 'linear-gradient(270deg, transparent 0%, #5c33bc 50%, transparent 100%)',
+            backgroundSize: '50% 100%',
+            backgroundPosition: 'center top',
             backgroundRepeat: 'no-repeat',
             zIndex: 1,
           }}

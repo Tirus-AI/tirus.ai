@@ -47,7 +47,7 @@ const StepItem: React.FC<StepItemCardProps> = ({
         <Box
           sx={{
             position: "relative",
-            width: {xs: '248px', sm: '270px', md: '256px', lg: '255px', xl: '300px' },
+            width: {xs: '263px', sm: '270px', md: '256px', lg: '255px', xl: '300px' },
             height: {xs: 66, sm: 66, md: 80 },
             display: "flex",
             alignItems: "center",

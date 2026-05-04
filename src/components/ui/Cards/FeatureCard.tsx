@@ -23,9 +23,9 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
     >
       <Box
         sx={{
-          width: { xs: '287px', sm: '260px', md: '280px', lg: '280px', xl: '280px', xxl: '300px' },
-          height: { xs: '215px', sm: '225px', md: '225px', lg: '225px', xl: '230px', xxl: '240px' },
-          px: {xl: 3},
+          width: { xs: '100%', sm: '260px', md: '280px', lg: '280px', xl: '280px', xxl: '300px' },
+          height: { xs: '210px', sm: '225px', md: '225px', lg: '225px', xl: '230px', xxl: '240px' },
+          px: {xs: 3, sm: 0, xl: 3},
           fontWeight: 600,
           backdropFilter: 'blur(30px)',
           backgroundColor: '#0A0F1C',
@@ -33,7 +33,6 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           display: 'flex',
           flexDirection: 'column',
           borderRadius: '10px',
-          cursor: 'pointer',
           position: 'relative',
           transition: '400ms',
           textAlign: 'center',
@@ -67,7 +66,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             fontWeight: 400,
             color: '#FFFFFFB3',
             lineHeight: 1.5,
-            whiteSpace: 'pre-line'
+            whiteSpace: {xs: 'normal', sm: 'pre-line' },
           }}
         >
           {description}
@@ -78,12 +77,12 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             backgroundColor: '#ffffff13',
             position: 'absolute',
             bottom: '0',
-            left: '30%',
-            transform: {xs: 'translateY(-40%)', sm: 'translateY(-130%)', md: 'translateY(-130%)'},
-            filter: {xs: 'blur(11px)', sm: 'blur(18px)', md: 'blur(18px)' },
+            left: {xs: '35%', sm: '30%', md: '35%', lg: '35%'},
+            transform: {xs: 'translateY(-70%)', sm: 'translateY(-130%)', md: 'translateY(-125%)'},
+            filter: {xs: 'blur(28px)', sm: 'blur(18px)', md: 'blur(18px)' },
             borderRadius: '50%',
             width: '7rem',
-            height: '1em',
+            height: {xs: '2em', sm: '1em', md: '1em'},
           }}
         />
       </Box>

@@ -38,19 +38,20 @@ const Features: React.FC = () => {
           {featureData.sectionTitle}
         </Typography>
 
-        <Box
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: {
-              xs: '1fr',
-              sm: 'repeat(2, 1fr)',
-              md: 'repeat(2, 1fr)',
-              lg: 'repeat(4, 1fr)',
-            },
-            gap: {xs: 2, sm: 3, md: 3},
-            justifyItems: 'center',
-          }}
-        >
+       <Box
+  sx={{
+    display: 'grid',
+    gridTemplateColumns: {
+      xs: '1fr',
+      sm: 'repeat(2, 1fr)',
+      md: 'repeat(2, 1fr)',
+      lg: 'repeat(4, 1fr)',
+    },
+    gap: { xs: 2, sm: 3, md: 3 },
+    justifyItems: { xs: 'stretch', sm: 'center' }, // ← key change
+    alignItems: 'stretch',
+  }}
+>
           {featureData.items.map((item, i) => (
             <FeatureCard
               key={i}
