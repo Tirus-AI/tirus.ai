@@ -2,16 +2,19 @@
     {
         "title": "Tirus in Education",
         "description": "Create a customizable educational \nplatform tailored to your specific needs.",
-        "icon": "/assets/TirusEducation.png"
+        "icon": "/assets/TirusEducation.png",
+        "demoVideo": "/assets/videos/tirus-education-demo.mp4"
     },
     {
         "title": "Tirus in Fintech",
         "description": "Automate complex loan underwriting \nworkflows with AI, reducing manual \nreview time and accelerating loan \napprovals.",
-        "icon": "/assets/TirusFintech.png"
+        "icon": "/assets/TirusFintech.png",
+        "demoVideo": "/assets/videos/tirus-fintech-demo.mp4"
     },
     {
         "title": "Tirus in Automotive",
         "description": "Increase your shop’s repair throughput \nby saving valuable time on routine, \ntime-consuming tasks.",
-        "icon": "/assets/TirusAutomotive.png"
+        "icon": "/assets/TirusAutomotive.png",
+        "demoVideo": "/assets/videos/tirus-automotive-demo.mp4"
     }
 ]

@@ -1,13 +1,15 @@
 import React from 'react';
-import { Box, Typography, useTheme } from '@mui/material';
+import { Box, Button, Typography, useTheme } from '@mui/material';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 
 interface IndustryCardProps {
   title: string;
   description: string;
   icon?: string;
+  onWatchDemo?: () => void;
 }
 
-const IndustryCard: React.FC<IndustryCardProps> = ({ title, description, icon }) => {
+const IndustryCard: React.FC<IndustryCardProps> = ({ title, description, icon, onWatchDemo }) => {
   const theme = useTheme();
 
   return (
@@ -48,7 +50,7 @@ const IndustryCard: React.FC<IndustryCardProps> = ({ title, description, icon })
         <Box
           sx={{
             width: 'calc(100% - 6px)',
-            minHeight: {xs: 90, sm: 130, md: 130, lg: 126, xl: 150},
+            minHeight: { xs: 90, sm: 130, md: 130, lg: 126, xl: 150 },
             maxHeight: '100%',
             borderRadius: '10px',
             backgroundColor: '#0a0f1c',
@@ -93,6 +95,37 @@ const IndustryCard: React.FC<IndustryCardProps> = ({ title, description, icon })
           >
             {description}
           </Typography>
+          {onWatchDemo && (
+            <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
+              <Button
+                onClick={(e) => { e.stopPropagation(); onWatchDemo(); }}
+                sx={{
+                  fontSize: '14px !important',
+                  alignSelf: 'flex-start',
+                  mt: 3,
+                  backgroundColor: '#2B1D5C',
+                  borderRadius: '100px',
+                  border: '1px solid #FFFFFF1A',
+                  textTransform: 'none',
+                  px: '15.21px',
+                  py: '10.5px',
+
+                  fontFamily: 'Poppins, sans-serif',
+                  fontWeight: 400,
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+
+                  color: '#FFFFFFE5',
+
+                  '&:hover': {
+                    backgroundColor: '#37257A',
+                  },
+                }}
+              >
+                Watch a Demo
+              </Button>
+            </Box>
+          )}
         </Box>
       </Box>
     </Box>
