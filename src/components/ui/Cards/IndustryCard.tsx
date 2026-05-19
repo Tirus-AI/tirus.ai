@@ -50,7 +50,7 @@ const IndustryCard: React.FC<IndustryCardProps> = ({ title, description, icon, o
         <Box
           sx={{
             width: 'calc(100% - 6px)',
-            minHeight: {xs: 90, sm: 130, md: 130, lg: 126, xl: 150},
+            minHeight: { xs: 90, sm: 130, md: 130, lg: 126, xl: 150 },
             maxHeight: '100%',
             borderRadius: '10px',
             backgroundColor: '#0a0f1c',
@@ -96,32 +96,33 @@ const IndustryCard: React.FC<IndustryCardProps> = ({ title, description, icon, o
             {description}
           </Typography>
           {onWatchDemo && (
-            <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
+            <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
               <Button
                 onClick={(e) => { e.stopPropagation(); onWatchDemo(); }}
-                size="small"
-                startIcon={<PlayCircleOutlineIcon sx={{ fontSize: '15px !important' }} />}
                 sx={{
-                  color: 'rgba(255,255,255,0.55)',
-                  fontFamily: 'Poppins, sans-serif',
-                  fontSize: '12px',
-                  fontWeight: 400,
+                  fontSize: '14px !important',
+                  alignSelf: 'flex-start',
+                  mt: 3,
+                  backgroundColor: '#2B1D5C',
+                  borderRadius: '100px',
+                  border: '1px solid #FFFFFF1A',
                   textTransform: 'none',
-                  lineHeight: 1.5,
-                  px: 1.5,
-                  py: 0.5,
-                  borderRadius: '20px',
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  minWidth: 0,
+                  px: '15.21px',
+                  py: '10.5px',
+
+                  fontFamily: 'Poppins, sans-serif',
+                  fontWeight: 400,
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+
+                  color: '#FFFFFFE5',
+
                   '&:hover': {
-                    color: '#fff',
-                    backgroundColor: 'rgba(92,51,188,0.15)',
-                    borderColor: 'rgba(92,51,188,0.5)',
+                    backgroundColor: '#37257A',
                   },
-                  transition: 'all 0.2s',
                 }}
               >
-                Watch Demo
+                Watch a Demo
               </Button>
             </Box>
           )}

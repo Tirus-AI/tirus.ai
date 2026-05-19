@@ -34,97 +34,148 @@ const DemoModal: React.FC<DemoModalProps> = ({ open, videoSrc, onClose }) => {
   // Callback ref: called the moment the <video> element mounts into the DOM.
   // This is the most reliable autoplay trigger after a user gesture.
   const videoCallbackRef = useCallback((el: HTMLVideoElement | null) => {
-    if (el) el.play().catch(() => {});
+    if (el) el.play().catch(() => { });
   }, []);
 
-  if (!open) return null;
-
   return (
-    <Box
-      sx={{
-        position: 'fixed',
-        inset: 0,
-        zIndex: 1050,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'rgba(10, 15, 28, 0.82)',
-        backdropFilter: 'blur(3px)',
-      }}
-      onClick={onClose}
-    >
+    <Fade in={open} timeout={300} mountOnEnter unmountOnExit>
       <Box
         sx={{
-          position: 'relative',
-          width: { xs: '95vw', sm: '88vw', md: '76vw', lg: '860px' },
-          borderRadius: '16px',
-          overflow: 'hidden',
-          backgroundColor: '#0a0f1c',
-          border: '1px solid rgba(255,255,255,0.08)',
-          boxShadow: '0 24px 64px rgba(0,0,0,0.6)',
+          position: 'fixed',
+          inset: 0,
+          zIndex: 1050,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: 'rgba(10, 15, 28, 0.82)',
+          backdropFilter: 'blur(3px)',
+          borderRadius: "20px",
         }}
-        onClick={(e) => e.stopPropagation()}
+        onClick={onClose}
       >
-        <IconButton
-          onClick={onClose}
-          size="small"
+        <Box
           sx={{
-            position: 'absolute',
-            top: 10,
-            right: 10,
-            zIndex: 10,
-            color: 'rgba(255,255,255,0.7)',
-            backgroundColor: 'rgba(0,0,0,0.45)',
-            '&:hover': { color: '#fff', backgroundColor: 'rgba(0,0,0,0.65)' },
+            position: 'relative',
+            mx: '20px',
+
+            // video keeps fixed width
+            width: { xs: '95vw', sm: '88vw', md: '76vw', lg: '860px' },
+
+            borderRadius: '20px',
+            overflow: 'visible',
+
+            // only show dark bg during video
+            backgroundColor:
+              phase === 'video'
+                ? '#0a0f1c'
+                : 'transparent',
           }}
+          onClick={(e) => e.stopPropagation()}
         >
-          <CloseIcon fontSize="small" />
-        </IconButton>
+          <IconButton
+            onClick={onClose}
+            size="small"
+            sx={{
+              position: 'absolute',
+              top: 10,
+              right: 10,
+              zIndex: 10,
+              color: 'rgba(255,255,255,0.75)',
 
-        {/* Fixed 16:9 container — both panels share the same dimensions */}
-        <Box sx={{ position: 'relative', width: '100%', paddingBottom: '56.25%' }}>
+              backgroundColor: 'rgba(255,255,255,0.06)',
+              backdropFilter: 'blur(6px)',
 
-          {/* Video panel */}
-          <Fade in={phase === 'video' && videoIn} timeout={350} mountOnEnter unmountOnExit>
-            <Box sx={{ position: 'absolute', inset: 0, backgroundColor: '#000' }}>
-              <video
-                ref={videoCallbackRef}
-                key={videoSrc}
-                src={videoSrc}
-                autoPlay
-                controls
-                style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
-                onEnded={handleVideoEnd}
-              />
-            </Box>
-          </Fade>
+              border: '1px solid rgba(255,255,255,0.08)',
 
-          {/* Contact form panel */}
-          <Fade in={phase === 'form' && formIn} timeout={350} mountOnEnter unmountOnExit>
-            <Box
-              sx={{
-                position: 'absolute',
-                inset: 0,
-                overflowY: 'auto',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                p: { xs: 2, sm: 3, md: 4 },
-              }}
-            >
-              <ContactForm
-                title={contactFormData.title}
-                fields={contactFormData.fields}
-                messages={contactFormData.messages}
-                submitText={contactFormData.submitButton.text}
-                onSuccess={onClose}
-              />
-            </Box>
-          </Fade>
+              '&:hover': {
+                color: '#fff',
+                backgroundColor: 'rgba(255,255,255,0.12)',
+              },
+            }}
+          >
+            <CloseIcon fontSize="small" />
+          </IconButton>
 
+          {/* Fixed 16:9 container — both panels share the same dimensions */}
+          <Box
+            sx={{
+              position: 'relative',
+              width: '100%',
+              minHeight: phase === 'video' ? '0' : 'auto',
+            }}
+          >
+
+            {/* Video panel */}
+            <Fade in={phase === 'video' && videoIn} timeout={350} mountOnEnter unmountOnExit>
+              <Box
+                sx={{
+                  position: 'relative',
+                  width: '100%',
+                  paddingBottom: '56.25%',
+                  backgroundColor: '#000',
+                }}
+              >
+                <video
+                  ref={videoCallbackRef}
+                  key={videoSrc}
+                  src={videoSrc}
+                  autoPlay
+                  controls
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    display: 'block',
+                  }}
+                  onEnded={handleVideoEnd}
+                />
+              </Box>
+            </Fade>
+
+            {/* Contact form panel */}
+            <Fade in={phase === 'form' && formIn} timeout={350} mountOnEnter unmountOnExit>
+              <Box
+                sx={{
+                  width: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  boxSizing: 'border-box',
+                }}
+              >
+                <Box
+                  sx={{
+                    width: '100%',
+                    maxWidth: '924px',
+
+                    borderRadius: '20px',
+                    backgroundColor: '#0a0f1c',
+
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+
+                    overflow: 'hidden',
+                  }}
+                >
+                  <ContactForm
+                    title={contactFormData.title}
+                    fields={contactFormData.fields}
+                    messages={contactFormData.messages}
+                    submitText={contactFormData.submitButton.text}
+                    onSuccess={onClose}
+                  />
+                </Box>
+              </Box>
+            </Fade>
+
+          </Box>
         </Box>
       </Box>
-    </Box>
+    </Fade>
+
   );
 };
 
