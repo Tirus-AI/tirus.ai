@@ -1,13 +1,15 @@
 import React from 'react';
-import { Box, Typography, useTheme } from '@mui/material';
+import { Box, Button, Typography, useTheme } from '@mui/material';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 
 interface IndustryCardProps {
   title: string;
   description: string;
   icon?: string;
+  onWatchDemo?: () => void;
 }
 
-const IndustryCard: React.FC<IndustryCardProps> = ({ title, description, icon }) => {
+const IndustryCard: React.FC<IndustryCardProps> = ({ title, description, icon, onWatchDemo }) => {
   const theme = useTheme();
 
   return (
@@ -93,6 +95,36 @@ const IndustryCard: React.FC<IndustryCardProps> = ({ title, description, icon })
           >
             {description}
           </Typography>
+          {onWatchDemo && (
+            <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
+              <Button
+                onClick={(e) => { e.stopPropagation(); onWatchDemo(); }}
+                size="small"
+                startIcon={<PlayCircleOutlineIcon sx={{ fontSize: '15px !important' }} />}
+                sx={{
+                  color: 'rgba(255,255,255,0.55)',
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '12px',
+                  fontWeight: 400,
+                  textTransform: 'none',
+                  lineHeight: 1.5,
+                  px: 1.5,
+                  py: 0.5,
+                  borderRadius: '20px',
+                  border: '1px solid rgba(255,255,255,0.12)',
+                  minWidth: 0,
+                  '&:hover': {
+                    color: '#fff',
+                    backgroundColor: 'rgba(92,51,188,0.15)',
+                    borderColor: 'rgba(92,51,188,0.5)',
+                  },
+                  transition: 'all 0.2s',
+                }}
+              >
+                Watch Demo
+              </Button>
+            </Box>
+          )}
         </Box>
       </Box>
     </Box>

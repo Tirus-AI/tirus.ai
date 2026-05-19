@@ -14,11 +14,12 @@ interface ContactFormCardProps {
         success: string;
         failure: string;
     };
+    onSuccess?: () => void;
 }
 
 const API_URL = "https://n8n.lmstudentportal.com/webhook/smtp";
 
-const ContactForm: React.FC<ContactFormCardProps> = ({ title, fields, messages, submitText }) => {
+const ContactForm: React.FC<ContactFormCardProps> = ({ title, fields, messages, submitText, onSuccess }) => {
     const theme = useTheme();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -58,6 +59,7 @@ const ContactForm: React.FC<ContactFormCardProps> = ({ title, fields, messages, 
 
             setSnack({ open: true, message: messages.success, severity: "success" });
             setName(""); setEmail(""); setMessage("");
+            onSuccess?.();
         } catch {
             setSnack({ open: true, message: messages.failure, severity: "error" });
         } finally {
