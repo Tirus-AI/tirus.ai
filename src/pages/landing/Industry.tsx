@@ -40,30 +40,35 @@ const Industry: React.FC = () => {
             px={2}
             maxWidth={{md: 900, lg: 1300, xl: 1410, xxl: 1500}}
           >
-            {industryData.map((item, idx) => (
-              <Grid
-                key={idx}
-                item
-                xs={1}
-                sm={1}
-                md={1}
-                lg={1}
-                xl={1}
-                xxl={1}
-                sx={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                   alignSelf: { md: idx === 1 ? 'flex-start' : 'center' },
-                }}
-              >
-                <IndustryCard
-                  title={item.title}
-                  description={item.description}
-                  icon={item.icon}
-                  onWatchDemo={item.demoVideo ? () => handleWatchDemo(item.demoVideo) : undefined}
-                />
-              </Grid>
-            ))}
+            {industryData.map((item, idx) => {
+              const youtubeUrl = 'youtubeUrl' in item ? item.youtubeUrl : '';
+              const showDemoButton = item.title === 'Tirus in Fintech' && youtubeUrl;
+
+              return (
+                <Grid
+                  key={idx}
+                  item
+                  xs={1}
+                  sm={1}
+                  md={1}
+                  lg={1}
+                  xl={1}
+                  xxl={1}
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignSelf: { md: idx === 1 ? 'flex-start' : 'center' },
+                  }}
+                >
+                  <IndustryCard
+                    title={item.title}
+                    description={item.description}
+                    icon={item.icon}
+                    onWatchDemo={showDemoButton ? () => handleWatchDemo(youtubeUrl) : undefined}
+                  />
+                </Grid>
+              );
+            })}
           </Grid>
         </Box>
       </Box>

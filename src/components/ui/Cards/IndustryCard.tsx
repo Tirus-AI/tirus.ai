@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Button, Typography, useTheme } from '@mui/material';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 
 interface IndustryCardProps {
   title: string;
@@ -95,7 +94,7 @@ const IndustryCard: React.FC<IndustryCardProps> = ({ title, description, icon, o
           >
             {description}
           </Typography>
-          {/* {onWatchDemo && (
+          {onWatchDemo && (
             <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
               <Button
                 onClick={(e) => { e.stopPropagation(); onWatchDemo(); }}
@@ -125,7 +124,7 @@ const IndustryCard: React.FC<IndustryCardProps> = ({ title, description, icon, o
                 Watch a Demo
               </Button>
             </Box>
-          )} */}
+          )}
         </Box>
       </Box>
     </Box>

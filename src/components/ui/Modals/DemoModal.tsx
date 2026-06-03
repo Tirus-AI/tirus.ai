@@ -1,8 +1,29 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useId } from 'react';
 import { Box, Fade, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ContactForm from '../../form/ContactForm';
 import contactFormData from '../../../data/ContactFormData.json';
+
+declare global {
+  interface Window {
+    YT?: {
+      Player: new (
+        elementId: string,
+        options: {
+          videoId: string;
+          playerVars?: Record<string, number | string>;
+          events?: {
+            onStateChange?: (event: { data: number }) => void;
+          };
+        }
+      ) => { destroy: () => void };
+      PlayerState: {
+        ENDED: number;
+      };
+    };
+    onYouTubeIframeAPIReady?: () => void;
+  }
+}
 
 interface DemoModalProps {
   open: boolean;
@@ -10,10 +31,34 @@ interface DemoModalProps {
   onClose: () => void;
 }
 
+const getYouTubeVideoId = (url: string) => {
+  try {
+    const parsedUrl = new URL(url);
+
+    if (parsedUrl.hostname.includes('youtu.be')) {
+      return parsedUrl.pathname.split('/').filter(Boolean)[0] ?? '';
+    }
+
+    if (parsedUrl.pathname.startsWith('/embed/')) {
+      return parsedUrl.pathname.split('/').filter(Boolean)[1] ?? '';
+    }
+
+    if (parsedUrl.pathname.startsWith('/shorts/')) {
+      return parsedUrl.pathname.split('/').filter(Boolean)[1] ?? '';
+    }
+
+    return parsedUrl.searchParams.get('v') ?? '';
+  } catch {
+    return '';
+  }
+};
+
 const DemoModal: React.FC<DemoModalProps> = ({ open, videoSrc, onClose }) => {
   const [phase, setPhase] = useState<'video' | 'form'>('video');
   const [videoIn, setVideoIn] = useState(true);
   const [formIn, setFormIn] = useState(false);
+  const playerId = `youtube-player-${useId().replace(/:/g, '')}`;
+  const videoId = getYouTubeVideoId(videoSrc);
 
   useEffect(() => {
     if (open) {
@@ -31,11 +76,55 @@ const DemoModal: React.FC<DemoModalProps> = ({ open, videoSrc, onClose }) => {
     }, 350);
   }, []);
 
-  // Callback ref: called the moment the <video> element mounts into the DOM.
-  // This is the most reliable autoplay trigger after a user gesture.
-  const videoCallbackRef = useCallback((el: HTMLVideoElement | null) => {
-    if (el) el.play().catch(() => { });
-  }, []);
+  useEffect(() => {
+    if (!open || !videoId || phase !== 'video') return;
+
+    let player: { destroy: () => void } | undefined;
+    let isMounted = true;
+
+    const createPlayer = () => {
+      if (!isMounted || !window.YT) return;
+
+      player = new window.YT.Player(playerId, {
+        videoId,
+        playerVars: {
+          autoplay: 1,
+          controls: 1,
+          modestbranding: 1,
+          rel: 0,
+        },
+        events: {
+          onStateChange: (event) => {
+            if (event.data === window.YT?.PlayerState.ENDED) {
+              handleVideoEnd();
+            }
+          },
+        },
+      });
+    };
+
+    if (window.YT?.Player) {
+      createPlayer();
+    } else {
+      const previousCallback = window.onYouTubeIframeAPIReady;
+
+      window.onYouTubeIframeAPIReady = () => {
+        previousCallback?.();
+        createPlayer();
+      };
+
+      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+        const script = document.createElement('script');
+        script.src = 'https://www.youtube.com/iframe_api';
+        document.body.appendChild(script);
+      }
+    }
+
+    return () => {
+      isMounted = false;
+      player?.destroy();
+    };
+  }, [handleVideoEnd, open, phase, playerId, videoId]);
 
   return (
     <Fade in={open} timeout={300} mountOnEnter unmountOnExit>
@@ -115,21 +204,16 @@ const DemoModal: React.FC<DemoModalProps> = ({ open, videoSrc, onClose }) => {
                   backgroundColor: '#000',
                 }}
               >
-                <video
-                  ref={videoCallbackRef}
+                <Box
+                  id={playerId}
                   key={videoSrc}
-                  src={videoSrc}
-                  autoPlay
-                  controls
-                  style={{
+                  sx={{
                     position: 'absolute',
                     inset: 0,
                     width: '100%',
                     height: '100%',
-                    objectFit: 'contain',
                     display: 'block',
                   }}
-                  onEnded={handleVideoEnd}
                 />
               </Box>
             </Fade>
