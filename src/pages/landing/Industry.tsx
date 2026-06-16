@@ -42,7 +42,7 @@ const Industry: React.FC = () => {
           >
             {industryData.map((item, idx) => {
               const youtubeUrl = 'youtubeUrl' in item ? item.youtubeUrl : '';
-              const showDemoButton = item.title === 'Tirus in Fintech' && youtubeUrl;
+              const showDemoButton = item.title === 'Tirus in Fintech' || item.title === 'Tirus in Automotive' ? youtubeUrl : false;
 
               return (
                 <Grid
