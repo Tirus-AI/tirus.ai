@@ -41,8 +41,8 @@ const Industry: React.FC = () => {
             maxWidth={{md: 900, lg: 1300, xl: 1410, xxl: 1500}}
           >
             {industryData.map((item, idx) => {
-              const youtubeUrl = 'youtubeUrl' in item ? item.youtubeUrl : '';
-              const showDemoButton = item.title === 'Tirus in Fintech' || item.title === 'Tirus in Automotive' ? youtubeUrl : false;
+              const youtubeUrl = 'youtubeUrl' in item && typeof item.youtubeUrl === 'string' ? item.youtubeUrl : '';
+              const showDemoButton = (item.title === 'Tirus in Fintech' || item.title === 'Tirus in Automotive') && youtubeUrl ? youtubeUrl : false;
 
               return (
                 <Grid
